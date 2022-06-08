@@ -1,0 +1,151 @@
+@import "colores";
+
+/*----------------------------------------------BODY------------------------------------------------------*/
+    
+body#index {
+    display: grid;
+    grid-template-areas: 
+    "menu"
+    "header__index"
+    "index__article"
+    "footer";
+    width: auto;
+    height: auto;
+    grid-template-columns: 1fr;
+    background-image: url("../img/Fondo-web1.jpg");
+    background-color: black;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+}
+
+
+/*----------------------------------------------MENU-----------------------------------------------------*/
+#menu {
+    grid-area: menu;
+    position: sticky; /* Lo dejo fijo al scrolear */
+    top: 1%; /* posicion al scrolear */
+    margin-top: 1%;
+    background-color: $colorNav;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;/* ocupa todo el ancho de pantalla */
+    align-items: center;
+    height: 35px;
+    a {
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        font-family: 'Bangers', cursive;
+        &:hover {
+            background-color: $colorNav;
+            color: white;
+        }
+    }
+    
+}
+
+/*--------------------------------------------HEADER INDEX-----------------------------------------------*/
+.header__index {
+    grid-area: header__index;
+    a{
+        text-decoration: none;
+        color: $colorLogo;
+        font-family: fantasy;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: left;
+        height: auto; 
+        gap: 5px; 
+        text-shadow: 2px 2px 20px rgba(151, 250, 142, 0.61);
+    }
+    .header__isotipo {
+        font-family: 'Indie Flower', cursive;
+        color: white;
+        align-items: center;
+        font-size: 35px;
+        margin-left: 10px;
+    }
+    .header__logo {
+        align-items: center;
+        justify-content: left;
+        padding-right: 20px;
+        height: 200px;
+        width: auto;
+        margin-left: 5px;
+        border-radius: 150px;
+    }
+    .header__leyenda {
+        font-size: 100px; 
+    }
+    
+}
+
+/*----------------------------------------------ARTICLE INDEX------------------------------------------------*/
+.index__article {
+    grid-area: index__article;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 70px;
+    font-family: 'Koulen', cursive;
+}
+
+@keyframes mi-efecto {
+    0% {
+        height: 150px; 
+        font-size: 80%;
+        color: rgb(47, 47, 48);
+    }
+    50% {
+        height: 150px; 
+        font-size: 90%;
+        color: white;
+    }
+    100% {
+        height: 150px; 
+        font-size: 80%;
+        color: rgb(47, 47, 48);
+    }
+}
+.index__article .animate1 {
+    animation-name: mi-efecto;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s; /* Tiempo en que empieza la animacion desde que carga la pagina */
+    animation-iteration-count: infinite;/* duracion del loop */
+}
+
+/*----------------------------------------------FOOTER------------------------------------------------*/
+#footer {
+    grid-area: footer;
+    display: flex;
+    background-color: black;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    padding: 2px;
+    padding-right: 10px;
+    height: 52px;
+    .footer__titulo {
+        font-family: 'Permanent Marker', cursive;
+        color: white;
+        font-size: 20px;
+    } 
+    .img__instagram {
+        width: 50px;
+        height: auto;
+    }
+    .img__twitter {
+        width: 55px;
+        height: auto;
+    }
+    .img__linkedin {
+        width: 47px;
+        height: auto;
+    }
+}      
+    
+       
+
